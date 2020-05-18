@@ -1,0 +1,433 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+    <hr>
+
+
+
+<div id="myBtnContainer">
+  <button class="btn active"style="color:white;" onclick="filterSelection('all')"> Show all Book's</button>&nbsp&nbsp
+  <button class="btn active" style="color:white;" onclick="filterSelection('nature')"> C-Language</button>&nbsp&nbsp
+  <button class="btn active" style="color:white;" onclick="filterSelection('cars')"> C++</button>&nbsp&nbsp
+    <button class="btn active" style="color:white;" onclick="filterSelection('people')"> Data Structure</button>
+    <br><br>
+
+  <button class="btn active" style="color:white;" onclick="filterSelection('cj')"> Java</button>&nbsp&nbsp
+    <button class="btn active" style="color:white;" onclick="filterSelection('cp')"> Python</button>&nbsp&nbsp
+
+    <button class="btn active" style="color:white;" onclick="filterSelection('dj')"> Django</button>&nbsp&nbsp
+    <button class="btn active" style="color:white;" onclick="filterSelection('ht')"> UI Technologoy</button>&nbsp&nbsp
+
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+
+
+
+    <div class="column nature">
+    <div class="content">
+      <img src="{% static 'images/c1.jpg' %}" alt="Nature" style="width:100%">
+        <a href="https://www.edutechlearners.com/download/books/The%20C%20Programming%20Language%20by%20Kernighan%20&%20Ritchie%20PDF.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+
+  <div class="column nature">
+    <div class="content">
+      <img src="{% static 'images/c6.jpg' %}" alt="Nature" style="width:93%">
+        <a href="http://rifatshahriyar.github.io/files/CSE281/Let_Us_C_5E.pdf" style="color: black"; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column nature">
+    <div class="content">
+      <img src="{% static 'images/c3.jpg' %}" alt="Nature" style="width:100%">
+        <a href="http://karadev.net/uroci/filespdf/files/Programming-in-ANSI-C.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column nature">
+    <div class="content">
+      <img src="{% static 'images/c4.jpg' %}" alt="Nature" style="width:83%">
+        <a href="https://phy.ntnu.edu.tw/~cchen/ctutor.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column nature">
+    <div class="content">
+    <img src="{% static 'images/c5.jpg' %}" alt="Nature" style="width:100%">
+        <a href="https://www.engineeringbookspdf.com/download/?file=2022" style="color:black; text-center"><b>Download PDF></b></a>
+
+
+
+
+    </div>
+
+  </div>
+
+
+  <div class="column cars">
+    <div class="content">
+    <img src="{% static 'images/cp2.jpg' %}" alt="Car" style="width:100%">
+        <a href="http://www.nylxs.com/docs/The%20C++%20Programming.Language.4th.Edition.Jun.2013%5BA4%5D.pdf" style="color:black; text-center"><b>Download PDF</b></a>
+
+    </div>
+
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+      <img src="{% static 'images/cp33.jpg' %}" alt="Car" style="width:102%">
+        <a href="http://www.uml.org.cn/c%2B%2B/pdf/C%2B%2BComplete%20Reference%20(3rd%20Ed.).pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column cars">
+    <div class="content">
+      <img src="{% static 'images/cp5.jpg' %}" alt="Car" style="width:93%">
+        <a href="https://moodle.ufsc.br/pluginfile.php/2377667/mod_resource/content/0/Effective_Modern_C__.pdf" style="color:black; text-center"><b>Read Now></b></a>
+
+    </div>
+  </div>
+    <div class="column cars">
+    <div class="content">
+      <img src="{% static 'images/cpp08.png' %}" alt="Car" style="width:105%">
+        <a href="https://www.ece.uvic.ca/~frodo/cppbook/downloads/lecture_slides_for_programming_in_c++-2019-02-04.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+
+
+
+
+  <div class="column people">
+    <div class="content">
+      <img src="{% static 'images/ds1.jpg' %}" alt="Car" style="width:100%">
+        <a href="https://faculty.washington.edu/jstraub/dsa/Master_2_7a.pdf" style="color:black; text-center"><b>Download Now></b></a>
+
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="{% static 'images/ds3.jpg' %}" alt="Car" style="width:102%">
+        <a href="https://opendatastructures.org/ods-cpp.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="{% static 'images/ds4.png' %}" alt="Car" style="width:110%">
+        <a href="http://www.cs.yale.edu/homes/aspnes/classes/223/notes.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+
+    <div class="column cj">
+    <div class="content">
+      <img src="{% static 'images/cj2.png' %}" alt="Car" style="width:80%">
+        <a href="https://www.cp.eng.chula.ac.th/books/wp-content/uploads/sites/5/2018/01/java101.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+  <div class="column cj">
+    <div class="content">
+    <img src="{% static 'images/cj1.png' %}" alt="Car" style="width:103%">
+        <a href="http://www.cs.columbia.edu/~lok/3101/lectures/02-corejava.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+  <div class="column cj">
+    <div class="content">
+    <img src="{% static 'images/cj3.jpg' %}" alt="Car" style="width:95%">
+        <a href="http://www2.nsru.ac.th/tung/java_doc/Core%20Java%20Volume%20I-%20Fundamentals%209th%20Edition-%20Horstmann,%20Cay%20S.%20&%20Cornell,%20Gary_2013.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column cj">
+    <div class="content">
+    <img src="{% static 'images/cj4.png' %}" alt="Car" style="width:100%">
+        <a href="https://drive.google.com/file/d/1VMsWP978We2H786IMwsuEmlrm1vPZ7vr/view" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column cj">
+    <div class="content">
+    <img src="{% static 'images/cj5.jpg' %}" alt="Car" style="width:89%">
+        <a href="https://drive.google.com/file/d/1Nup2TkxIEInpu8DnJleeg8W2JWq7ZvAY/view" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column cj">
+    <div class="content">
+    <img src="{% static 'images/cj6.png' %}" alt="Car" style="width:103%">
+        <a href="https://drive.google.com/file/d/19sx5Fts2ZMxZWJly16g4W-KMmU829ujV/view" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+
+    <div class="column cp">
+    <div class="content">
+    <img src="{% static 'images/py3.jpg' %}" alt="Car" style="width:85%">
+        <a href="https://www.greenteapress.com/thinkpython/thinkpython.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column cp">
+    <div class="content">
+    <img src="{% static 'images/py1.png' %}" alt="Car" style="width:110%">
+        <a href="https://www.davekuhlman.org/python_book_01.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column cp">
+    <div class="content">
+    <img src="{% static 'images/py4.jpg' %}" alt="Car" style="width:90%">
+        <a href="http://index-of.es/Python/Python%203%20for%20Absolute%20Beginners.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column cp">
+    <div class="content">
+    <img src="{% static 'images/py2.png' %}" alt="Car" style="width:94%">
+        <a href="https://www.brianheinold.net/python/A_Practical_Introduction_to_Python_Programming_Heinold.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column cp">
+    <div class="content">
+    <img src="{% static 'images/py5.png' %}" alt="Car" style="width:88%">
+        <a href="https://static.realpython.com/python-basics-sample-chapters.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column cp">
+    <div class="content">
+    <img src="{% static 'images/py6.jpg' %}" alt="Car" style="width:103%">
+        <a href="http://cs.stmarys.ca/~porter/csc/227/ProgrammingInPython3.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+
+    <div class="column dj">
+    <div class="content">
+    <img src="{% static 'images/dj4.png' %}" alt="Car" style="width:103%">
+        <a href="https://resources.sei.cmu.edu/asset_files/Presentation/2017_017_001_497756.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column dj">
+    <div class="content">
+    <img src="{% static 'images/dj1.png' %}" alt="Car" style="width:82%">
+        <a href="https://buildmedia.readthedocs.org/media/pdf/django/latest/django.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column dj">
+    <div class="content">
+    <img src="{% static 'images/dj5.png' %}" alt="Car" style="width:103%">
+        <a href="https://sipb.mit.edu/iap/django/CCCDjango2010.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column dj">
+    <div class="content">
+    <img src="{% static 'images/dj3.png' %}" alt="Car" style="width:103%">
+        <a href="https://readthedocs.org/projects/gswd-a-crash-course-pycon-2014/downloads/pdf/latest/" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+
+    <div class="column dj">
+    <div class="content">
+    <img src="{% static 'images/dj2.png' %}" alt="Car" style="width:95%">
+        <a href="https://www.gti.bh/Library/assets/djangobookwzy482.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column ht">
+    <div class="content">
+    <img src="{% static 'images/ht2.jpg' %}" alt="Car" style="width:103%">
+        <a href="http://michael-puff.de/Programmierung/HTML/Step%20by%20Step%20HTML5.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column ht">
+    <div class="content">
+    <img src="{% static 'images/ht1.jpg' %}" alt="Car" style="width:100%">
+        <a href="https://wtf.tw/ref/duckett.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column ht">
+    <div class="content">
+    <img src="{% static 'images/ht3.jpg' %}" alt="Car" style="width:96%">
+        <a href="https://www.dcpehvpm.org/E-Content/BCA/BCA-II/Web%20Technology/the-complete-reference-html-css-fifth-edition.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column ht">
+    <div class="content">
+    <img src="{% static 'images/ht5.jpg' %}" alt="Car" style="width:100%">
+        <a href="http://wtf.tw/ref/robbins.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column ht">
+    <div class="content">
+    <img src="{% static 'images/ht4.jpg' %}" alt="Car" style="width:93%">
+        <a href="https://eloquentjavascript.net/Eloquent_JavaScript.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+    <div class="column ht">
+    <div class="content">
+    <img src="{% static 'images/ht6.png' %}" alt="Car" style="width:100%">
+        <a href="https://wiki.lib.sun.ac.za/images/0/07/Bootstrap-tutorial.pdf" style="color:black; text-center"><b>Download PDF></b></a>
+
+    </div>
+  </div>
+
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>

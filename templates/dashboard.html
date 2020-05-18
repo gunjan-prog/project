@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body{
+        margin-left:  800px;
+        background-image: url(https://c4.wallpaperflare.com/wallpaper/587/270/473/black-and-white-blur-gray-iphone-wallpaper-preview.jpg) ;
+
+        background-size: cover;
+
+    }
+    h2{
+        color: white;
+        font-family: Arial;
+    }
+    h3{
+        color: white;
+    }
+    hr{
+        margin-left:290px;
+        margin-right: 290px;
+        height: 1px;
+        background-color: yellow;
+
+    }
+    h4{
+        color: white;
+    }
+    button{
+        background-color: dodgerblue;
+        height: 40px;
+        width: 200px;
+        color: white;
+        border: none;
+        border-radius: 30%;
+
+    }
+    h9{
+        color: white;
+    }
+
+</style>
+<body>
+<div style="width:1495px;height:30px; background: rgba(0, 0, 0, 0.4);">
+    <h9>&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp &nbsp &nbspCIOC WORLDWIDE &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp INVESTER RELATIONS </h9>
+{% include 'navbar.html' %}
+
+{% block content %}
+   <div style="width:1495px;height:100px; margin-top:10px; background: rgba(0, 0, 0, 0.4);"><br>
+       <h4><center>CIOC Announced Fourth Quarter 2020 Programming Book's on Apr 16,2020<br>  </center></h4>
+   <center><a href="{% url 'mainBook' %}" style="color:white;">Read More ></a> </center>
+   </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h2><center> PURPOSE-DRIVEN,RESILIENT,ADAPTABLE</center></h2>
+    <hr>
+    <h3><center style="color: white"> lead in the post-COVID world with business 4.0<sup>TM</sup> </center></h3><br>
+    <center><a href="{% url 'readmore' %}"> <button ><b>Read More</b></button></a> </center><br><br><br><br>
+    {% endblock %}
+{% include 'footer.html' %}
+
+
+</body>
+</html>

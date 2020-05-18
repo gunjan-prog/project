@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+     h9{
+        color: white;
+    }
+    #a1{
+        height: 450px;
+        width: 1495px;
+    }
+    hr {
+        color: yellow;
+    }
+</style>
+<body>
+<div style="width:1495px;height:30px; background: rgba(0, 0, 0, 0.4);">
+    <h9>&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp &nbsp &nbspCIOC WORLDWIDE &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp INVESTER RELATIONS </h9>
+{% include 'navbar.html' %}
+    {% block content %}
+
+        <img  id="a1" src="{% static 'images/ship.jpg' %}">
+        <h2><center> PURPOSE-DRIVEN,RESILIENT AND ADAPTABLE WITH BUSINESS 4.0<sup>TM</sup></center></h2>
+        <HR>
+        <br>
+       <center><p style="font-size: 20px;">
+        As the world conducts its business under lockdown, the question on everybody’s mind – beyond<br> immediate health considerations – is about the economic fallout. Given the unpredictable nature<br>of the virus’ onslaught, it is today difficult to pronounce definite economic outcomes.<br> But directionally, it is clear that organizations and individuals need to gear up for a period <br>of uncertainty and a new normal.
+
+What does this mean for enterprises in the Business 4.0 world?<br>
+
+In the Business 4.0 era, organizations build upon their strong digital technology foundations to pursue certain economic behaviors – leveraging ecosystems, personalizing at scale, embracing risk and creating exponential value – even as they shift their mindsets to harnessing abundance rather than optimizing scarce resources.
+
+While these longer-term trends continue to drive them towards growth, transformation and sustainability, we believe that in the medium term, enterprises need to focus on the more urgent imperatives of ensuring resilience and adaptability during difficult times.
+
+Driven by Purpose
+
+A strong driver of how companies adapt themselves is the way they look at their purpose. Organizations are looking beyond the products they make and sell to the purpose behind their existence, which in turn often defines the blueprint for their transformation journey.
+
+Vitality is no longer just a medical insurer, but also an orchestrator of wellness. Damen Shipyards is repositioning itself as a maritime solutions provider rather than just a shipbuilder. Thomson Reuters has recast itself from being a product-led information services company to a purpose-led, trust-based ‘answer’ company. Energy company Total no longer just produces and sells fuels but wants to become a responsible energy major providing power that is affordable, reliable and clean.
+
+This trend of organizing business around purpose is a very strong driver of transformation. We believe this will only accelerate in the upcoming months as firms seek to introspect about what is most critical for them and what their true sources of value are. They will seek to get a higher order of productivity and growth by looking within their value stream to unearth and package consumable services that drive growth.
+
+Building Resilience
+
+Layer this purpose-driven approach with the characteristics that enterprises need to adapt to this ‘new normal’, and you have a resilient organization that can pivot, if needed, to thrive during periods of economic uncertainty.
+
+Resilience calls for both the ability to withstand shocks to the system, as well as the adaptability needed to quickly tweak business models, launch new offerings or target new markets, while continuing to provide superior customer experience.
+
+To withstand economic shocks, for instance, a strategic approach to cost management and cashflow optimization or the ability to ensure business continuity through remote and cognitive operations in the face of a sudden shutdown like the current one become critical enablers. Applying innovation at scale using ‘agile’ as a vehicle also helps enterprises embrace risk and rehearse their options.
+
+
+Being Adaptable
+
+To be adaptable, several approaches – including taking a platform view and leveraging ecosystems, borderless capacity enhancement or redesigning the supply chain and repurposing assets – could be helpful. A prerequisite for this, though, is flexible technology architecture. The technology pillars of Business 4.0 – agile, intelligence, automation and cloud – become the foundation for an adaptive core or ‘digital spine’ for the organization.
+
+This helps it address the structural change that is already underway and inevitably gets heightened during periods of economic turmoil. In our experience of working with large organizations, we have seen that change is often slowed or stalled by legacy technology environments. Building this adaptive core is at the heart of a resilient and adaptable organization.
+
+Companies that are driven by a strong purpose and build resilience into their fabric to adapt to changing economic environments would be better able to navigate the post Covid-19 world.
+       </p></center>
+       {% endblock %}<br><br>
+{% include 'footer.html' %}
+
+</body>
+</html>

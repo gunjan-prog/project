@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+     body{
+        margin-left:  800px;
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQf07x2C914UVhtEL40HPz2Wd5V587ZfrnRcO3EwG5afVmGrUDO&usqp=CAU) ;
+
+        background-size: cover;
+
+    }
+     h9{
+        color: white;
+    }
+</style>
+<body>
+<div style="width:1495px;height:30px; background: rgba(0, 0, 0, 0.4);">
+    <h9>&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp &nbsp &nbspCIOC WORLDWIDE &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp INVESTER RELATIONS </h9>
+{% include 'navbar.html' %}
+    {% block content %}
+        <center><h2 style="color: white">Feedback</h2></center>
+       <center><p style="color: white; font-size: 25px;" >As a young start-up, we live by the feedback of our early adopters and customers.We'd<br>
+            love to hear everything you think about your experience using CIOC. Your feedback <br>will
+            help us improve your experience, our service, the product and platfrom.
+            Please<br> send all your feedback to us by email to <a href="https://myaccount.google.com/?utm_source=OGB&tab=mk&utm_medium=app" style="color: blue"><b>gunjan.kr518@gmail.com</b></a></p></center><br><br>
+
+        <center><h2 style="color: white">Customer & Technical Enquiries</h2>
+        <p style="color: white;font-size: 25px;">For question about how CIOC works,<br>including queries about our apps, the physical<br> books and digital books we stock or anything<br>
+            else we can help with, seng us an email to <br><a href="https://myaccount.google.com/?utm_source=OGB&tab=mk&utm_medium=app" style="color: blue"><b>gunjan.kr518@gmail.com</b></a></p></center>
+    {% endblock %}<br><br>
+{% include 'footer.html' %}
+
+</body>
+</html>

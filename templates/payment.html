@@ -1,0 +1,276 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>payment page</title>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Averia Libre' rel='stylesheet'>
+
+</head>
+<style >
+  body{
+    background: gray;
+  }
+  .jumbotron{
+    background: white;
+    margin-top: 20px;
+    margin-left: 440px;
+
+    height: 556px;
+    width: 600px;
+
+    border-radius: 40px;
+    }
+    .jumbotron1{
+    background: linear-gradient(to left, #000000 0%, #ffffff 100%);
+    margin-top: -100px;
+    margin-left: -30px;
+
+    height: 90px;
+    width: 480px;
+    border-radius: 20px;
+
+
+      }
+      h5{
+    margin-top: -40px
+  }
+  p{
+    margin-top: -10px;
+  }
+  img{
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 70px;
+    width: 70px;
+
+    border-radius: 15px;
+
+  }
+   .jumbotron4{
+    margin-top: -70px;
+    margin-left: -220px;
+  }
+  button{
+    background: linear-gradient(to left, #000000 0%, #ffffff 100%);
+
+
+    margin-left: 200px;
+
+        height: 40px;
+        width: 130px;
+        color: white;
+
+        border-radius: 11%;
+
+    }
+      ul {
+    list-style-type:none;
+}
+.jumbotron5{
+  margin-left: -160px;
+}
+
+
+
+
+
+/* Credit Card */
+
+.credit-card {
+  width            : 400px;
+  height           : 400px;
+  margin-left: 120px;
+
+
+  border-radius    : 6px;
+
+  box-shadow       : 1px 2px 3px 0px rgba(0,0,0,0.10);
+}
+
+
+
+
+
+/* Common */
+
+
+.month select,
+
+.year select {
+  height : 42px;
+}
+
+
+
+
+/* Card Number */
+
+
+
+
+/* Date Field */
+
+
+.card-number,.card-number1 {
+  width         : 160%;
+  margin-bottom : 20px;
+  padding-left  : 20px;
+  border        : 2px solid #e1e8ee;
+  border-radius : 6px;
+}
+.full-name,.full-name1 {
+  width         : 160%;
+  margin-bottom : 20px;
+  padding-left  : 20px;
+  border        : 2px solid #e1e8ee;
+  border-radius : 6px;
+}
+
+.card-number,.full-name,.card-number1,.full-name1,
+.cvv-details,
+.cvv-input input,
+.month select,
+.year select {
+  color   : #86939e;
+
+}
+
+.card-number,.full-name,.card-number1,.full-name1,
+.cvv-input input,
+.month select,
+.full-name,
+.year select {
+  height : 42px;
+}
+.credit-card {
+  margin-left: -200px;
+  width            : 120px;
+  height           : 400px;
+
+
+  border-radius    : 6px;
+
+  box-shadow       : 1px 2px 3px 0px rgba(0,0,0,0.10);
+}
+.credit-card1 {
+  margin-top: -115px;
+  margin-left: 270px;
+  width            : 120px;
+  height           : 400px;
+
+
+  border-radius    : 6px;
+
+  box-shadow       : 1px 2px 3px 0px rgba(0,0,0,0.10);
+}
+#p1{
+  margin-top: -210px;
+  margin-left: -600px;
+  height: 35px;
+  width:  40px;
+
+}
+#p2{
+  margin-top: -120px;
+  margin-left: -600px;
+  height: 35px;
+  width:  40px;
+
+}
+#p3{
+  margin-top: -170px;
+  margin-left: -60px;
+  height: 35px;
+  width:  40px;
+  }
+  #p4{
+  margin-top: -355px;
+  margin-left: -60px;
+  height: 35px;
+  width:  40px;
+  }
+
+
+
+
+
+
+</style>
+
+<body>
+
+  <div class="jumbotron">
+   <h5> <center><a style="font-family: 'Averia Libre'">Get started today</a></center></h5>
+   <p><center><a style="font-family: 'Averia Libre'">choose the right plans and started creating projects</a><center><br><br><br><br><br><br>
+    <div class="jumbotron1 jumbotron-fluid">
+  <img src={% static 'images/formal.jpg' %}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button> <a style="color: white" href="{% url 'sorry' %}">Change plan</a></button>
+
+</div>
+<div class="jumbotron4">
+  <a style="margin-left: 0px; color: white"><b>Ad.Book</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&#8377;49</b>/month</a>
+
+</div><br><br>
+<div class="jumbotron5">
+<ul>
+    <li><b style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Choose Your payment Option</u></b>
+</ul><br><br>
+
+
+  <form class="credit-card">
+      <div class="form-header">
+
+      </div>
+
+      <div class="form-body">
+        <!-- Card Number -->
+          <a href="{% url 'gpay' %}"><input type="button" value="Google Pay" style="height: 45px; width:  190px;border-radius: 5px;"></a>
+
+      <div class="form-body"><br>
+        <!-- Card Number -->
+          <a href="{% url 'ppay' %}"> <input type="button" value="Phone Pay" style="height: 45px; width:  190px;border-radius: 5px;"></a>
+        </div>
+
+        </form>
+
+  <form class="credit-card1">
+      <div class="form-header">
+
+      </div>
+
+      <div class="form-body">
+        <!-- Card Number -->
+          <a href="{% url 'paytm' %}"><input type="button" value="Paytm" style="height: 45px; width:  190px; border-radius: 5px;"></a>
+
+      <div class="form-body"><br>
+        <!-- Card Number -->
+          <a href="{% url 'ppal' %}"><input type="button" value="Pay Pal" style="height: 45px; width:  190px; border-radius: 5px;"></a>
+
+        </form>
+
+<div class="jumbotron6 jumbotron-fluid">
+  <img id="p1" src="{% static 'images/gpay.png' %}">
+</div>
+<div class="jumbotron7 jumbotron-fluid">
+  <img id="p2" src="{% static 'images/c22.jpg' %}">
+</div>
+<div class="jumbotron8 jumbotron-fluid">
+  <img id="p3" src="{% static 'images/c33.jpg' %}">
+</div>
+<div class="jumbotron9 jumbotron-fluid">
+  <img id="p4" src="{% static 'images/c44.jpg' %}">
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

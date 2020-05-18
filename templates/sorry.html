@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+     h9{
+        color: white;
+    }
+    #a2{
+        height: 250px;
+        width: 249px;
+
+    }
+</style>
+<body>
+<div style="width:1495px;height:30px; background: rgba(0, 0, 0, 0.4);">
+    <h9>&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp &nbsp &nbspCIOC WORLDWIDE &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp INVESTER RELATIONS </h9>
+{% include 'navbar.html' %}
+    {% block content %}
+       <center> <img  id="a2" src="{% static 'images/sorry.jpg' %}"></center>
+        <center><h2>You are not authorised for this page.<br> If you want to read some exciting 18+ Adult books You need to pay &#8377;49 INR.</h2></center>
+        <center><h3>Thank You</h3></center>
+        <center><a href="{% url 'payment' %}"> <input type="submit" value="Pay Now" style="height: 45px; width:  190px; color:white ;border-radius: 5px; background: linear-gradient(to left, #000000 0%, #ffffff 100%);"></center></a>
+
+    {% endblock %}<br><br>
+{% include 'footer.html' %}
+
+</body>
+</html>
